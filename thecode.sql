@@ -13,7 +13,7 @@ CREATE TABLE administration (
 
 CREATE TABLE hospital (
 	hospital_id INT PRIMARY KEY,
-  hospital_name VARCHAR(64),
+	hospital_name VARCHAR(64),
 	address VARCHAR(100), 
 	director_name VARCHAR(32),
 	director_surname VARCHAR(32),

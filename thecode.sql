@@ -47,7 +47,7 @@ CREATE TABLE patient (
 	pat_surn VARCHAR(32),
 	birth_date DATE,
 	gender VARCHAR(12),
-	iin BIGINT,
+	iin VARCHAR(20),
 	address VARCHAR(100),
 	hospital_id INT,
 	FOREIGN KEY (hospital_id) REFERENCES hospital (hospital_id)
@@ -190,16 +190,16 @@ VALUES (200, 'surgeon', 100),
 (253, 'surgeon', 153);
 
 INSERT INTO patient (patient_id, pat_name, pat_surn, birth_date, gender, iin, address, hospital_id)
-VALUES (500, 'Nurlan', 'Mahmetzhanov', '1992-06-16', 'Male', 920616551252, 'Kyz Zhybek 41', 20),
-(501, 'Irina', 'Evenko', '1966-10-05', 'Female', 661005658045, 'Tashenova 9/3', 20),
-(504, 'Ulzhalgas', 'Zhundibayeva', '1985-08-28', 'Female', 850828650871, 'Kunaeva 63', 22),
-(505, 'Nurbolat', 'Baydos', '2001-11-11', 'Male', 011111554315, 'Baytursynova 70', 22),
-(508, 'Didar', 'Madeliev', '1989-11-15', 'Male', 891115554301, 'Zhandosova 11', 24),
-(509, 'Adil', 'Imenov', '1996-06-10', 'Male', 960610551034, 'Satpayeva 54', 24),
-(512, 'Almas', 'Dairov', '1991-02-17', 'Male', 910217556425, 'Trusova 72', 26),
-(513, 'Gazizkhan', 'Tanirbergen', '2001-05-02', 'Male', 010502556427, 'Momyshuly 70', 26),
-(516, 'Nikita', 'Kostromin', '2000-05-16', 'Male', 000516553245, 'Mayri 23', 28),
-(517, 'Aliya', 'Aitkozha', '2003-01-04', 'Female', 030104650511, 'Tkacheva 17', 28);
+VALUES (500, 'Nurlan', 'Mahmetzhanov', '1992-06-16', 'Male', '920616551252', 'Kyz Zhybek 41', 20),
+(501, 'Irina', 'Evenko', '1966-10-05', 'Female', '661005658045', 'Tashenova 9/3', 20),
+(504, 'Ulzhalgas', 'Zhundibayeva', '1985-08-28', 'Female', '850828650871', 'Kunaeva 63', 22),
+(505, 'Nurbolat', 'Baydos', '2001-11-11', 'Male', '011111554315', 'Baytursynova 70', 22),
+(508, 'Didar', 'Madeliev', '1989-11-15', 'Male', '891115554301', 'Zhandosova 11', 24),
+(509, 'Adil', 'Imenov', '1996-06-10', 'Male', '960610551034', 'Satpayeva 54', 24),
+(512, 'Almas', 'Dairov', '1991-02-17', 'Male', '910217556425', 'Trusova 72', 26),
+(513, 'Gazizkhan', 'Tanirbergen', '2001-05-02', 'Male', '010502556427', 'Momyshuly 70', 26),
+(516, 'Nikita', 'Kostromin', '2000-05-16', 'Male', '000516553245', 'Mayri 23', 28),
+(517, 'Aliya', 'Aitkozha', '2003-01-04', 'Female', '030104650511', 'Tkacheva 17', 28);
 
 INSERT INTO pat_info (pat_info_id, current_health, description, blood_type, lvl_pressure, lvl_blood, patient_id)
 VALUES (600, 'healthy', NULL, 1, '122', '133', 500),
